@@ -414,6 +414,9 @@ namespace simplex_method2
                             }
                             Console.WriteLine($"Значение функции: {new_c[0] * x1 + new_c[1] * x2 + new_c[2] * x3}");
                             Console.WriteLine($"Значение переменных: X1: {x1}, X2: {x2}, X3: {x3}");
+                            Console.WriteLine($"Значение функции(проверка): {new_c[0]} * {x1} + {new_c[1]} * {x2} + {new_c[2]} * {x3} = {new_c[0] * x1 + new_c[1] * x2 + new_c[2] * x3}");
+                            Console.WriteLine("Проверка ограничений:");
+                            for (int i = 0; i < A.GetLength(0);i++) Console.WriteLine($"{A[0,i]} * {x1} + {A[1,i]} * {x2} + {A[2,i]} * {x3} <= {b[i]}");
                             Console.WriteLine("______________________________________________");
                         }
                     }
